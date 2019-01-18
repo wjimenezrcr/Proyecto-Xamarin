@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoMoviles.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoMoviles.iOS", "ProyectoMoviles\ProyectoMoviles.iOS\ProyectoMoviles.iOS.csproj", "{EFC74840-6577-485D-B363-34BA030C0797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoMoviles", "ProyectoMoviles\ProyectoMoviles\ProyectoMoviles.csproj", "{CA5769F7-DD9E-411F-B0E9-9B05F09B731A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoMoviles", "ProyectoMoviles\ProyectoMoviles\ProyectoMoviles.csproj", "{CA5769F7-DD9E-411F-B0E9-9B05F09B731A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacion", "Documentacion", "{5F697F3B-B33E-433F-9010-0E423806AC52}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
