@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProyectoMoviles"
+             x:Class="ProyectoMoviles.MainPage"
+             Title="CONTINENTES">
+
+    <ContentPage.Content>
+        <Grid HeightRequest="50"
+              BackgroundColor="Silver" 
+            ColumnSpacing="1"
+              RowSpacing="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <ImageButton Source="Africa.jpg" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="0" Grid.Column="0" x:Name="botonNavegar1" />
+
+            <ImageButton Source="Europa.jpg" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="0" Grid.Column="1" x:Name="botonNavegar2" />
+
+            <ImageButton Source="Asia.jpg" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="1" Grid.Column="0" x:Name="botonNavegar3" />
+
+            <ImageButton Source="America.jpg" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="1" Grid.Column="1" x:Name="botonNavegar4" />
+
+            <ImageButton Source="Oceania.jpg" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="2" Grid.Column="0" x:Name="botonNavegar5" />
+
+            <ImageButton Source="" VerticalOptions="FillAndExpand" Aspect="Fill" 
+                         Grid.Row="2" Grid.Column="1" x:Name="botonNavegar6" />
+
+            <!--<Button Command="{Binding AgregarCommand}" Image="Africa.jpg" Grid.Row="2" Grid.Column="1"  VerticalOptions="Center"  />-->
+
+            <!--<Button Text="Haga click" x:Name="botonNavegar" Grid.Row="2" Grid.Column="1" />-->
+
+
+                <!--<Label Text="ASIA" Grid.Row="1" Grid.Column="0" 
+                   BackgroundColor="Yellow" FontSize="30" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   />-->
+
+            <!--<Label Text="EUROPA" Grid.Row="1" Grid.Column="1" 
+                   BackgroundColor="Red" FontSize="30" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   />-->
+            
+            <!--<Label Text="OCEANIA" Grid.Row="2" Grid.Column="0" 
+                   BackgroundColor="Magenta" FontSize="30" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   />-->
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
