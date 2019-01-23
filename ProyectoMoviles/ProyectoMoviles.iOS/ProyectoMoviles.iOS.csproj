@@ -175,4 +175,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Oceania.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
 </Project>

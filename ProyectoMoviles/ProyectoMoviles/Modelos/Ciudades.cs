@@ -5,17 +5,14 @@ using Newtonsoft.Json;
 
 namespace ProyectoMoviles.Modelos
 {
-    class Ciudades
+    public class Ciudades
     {
-        [JsonProperty(PropertyName = "Name")]
+        [JsonProperty(PropertyName = "id")]
+        public string Codigo { get; set; }
+
+        [JsonProperty(PropertyName = "nombre")]
         public string Nombre { get; set; }
 
-        [JsonProperty(PropertyName = "Price")]
-        public double Precio { get; set; }
 
-        [JsonProperty(PropertyName = "Quantity")]
-        public decimal Cantidad { get; set; }
-
-        public string RutaImagen { get; set; } = "https://cdn0.iconfinder.com/data/icons/business-mix/512/cargo-512.png";
     }
 }

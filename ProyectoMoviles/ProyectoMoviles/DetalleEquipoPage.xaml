@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMoviles.DetalleEquipoPage"
+             Title="{Binding Nombre, StringFormat='{0}'}">
+             
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20">
+
+            <Image Source="{Binding Escudo}" HorizontalOptions="Center" WidthRequest = "50" HeightRequest = "50" Aspect="Fill" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:" />
+                <Label Text="{Binding Nombre}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Partidos:" />
+                <Label Text="{Binding Partidos}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Ganados:" />
+                <Label Text="{Binding Ganados}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Empatados:" />
+                <Label Text="{Binding Empatados}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Perdidos:" />
+                <Label Text="{Binding Perdidos}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Goles a Favor:" />
+                <Label Text="{Binding Golesfavor}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Goles en Contra:" />
+                <Label Text="{Binding Golescontra}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Gol Diferencia:" />
+                <Label Text="{Binding Golesdiferencia}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Puntos:" />
+                <Label Text="{Binding Puntos}" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

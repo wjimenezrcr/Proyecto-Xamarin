@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMoviles.EquiposPage"
+              Title="Equipos">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Filtre los elementos" />
+
+            <ListView x:Name="ListViewDatos" 
+                      IsRefreshing="{Binding IsBusy}" 
+                      IsPullToRefreshEnabled="true"
+                      ItemsSource="{Binding Items}"
+                      RefreshCommand="{Binding RefrescarCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding EquipoID}" HorizontalOptions="Start"
+                                       VerticalTextAlignment="Center" Margin="5" />
+                                <Label Text="{Binding Nombre}" Margin="5" HorizontalOptions="End"
+                                    VerticalTextAlignment="Center" />
+                                <Label Text="{Binding Partidos}" IsVisible="False" />
+                                <Label Text="{Binding Ganados}" IsVisible="False" />
+                                <Label Text="{Binding Empatados}" IsVisible="False" />
+                                <Label Text="{Binding Perdidos}" IsVisible="False" />
+                                <Label Text="{Binding GolesFavor}" IsVisible="False" />
+                                <Label Text="{Binding GolesContra}" IsVisible="False" />
+                                <Label Text="{Binding GolesDiferencia}" IsVisible="False" />
+                                <Label Text="{Binding Puntos}" IsVisible="False" />
+                                <Label Text="{Binding Escudo}" IsVisible="False" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

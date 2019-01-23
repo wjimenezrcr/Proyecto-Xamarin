@@ -8,15 +8,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-
 namespace ProyectoMoviles.Servicios
 {
-    public class ApiService
+    public class ApiServiceEquipos
     {
-        
-        private const string WEB_SERVICE_URL = "https://apifootball.firebaseio.com/Countries.json";
+        private const string WEB_SERVICE_URL = "https://apifootball.firebaseio.com/team.json";
 
-        public async Task<Ciudades[]> GetStringAsync()
+        public async Task<Equipos[]> GetStringAsync()
         {
             // Dispose HttpClient
             using (var client = new HttpClient())
@@ -30,7 +28,7 @@ namespace ProyectoMoviles.Servicios
 
                 var response = await client.GetStringAsync("");
 
-                var data = JsonConvert.DeserializeObject<Ciudades[]>(response);
+                var data = JsonConvert.DeserializeObject<Equipos[]>(response);
 
                 Debug.WriteLine(
                     data
@@ -40,7 +38,7 @@ namespace ProyectoMoviles.Servicios
             };
         }
 
-        public async Task<Ciudades[]> GetAsync()
+        public async Task<Equipos[]> GetAsync()
         {
             var client = new HttpClient();
 
@@ -52,12 +50,12 @@ namespace ProyectoMoviles.Servicios
 
             if (!response.IsSuccessStatusCode)
             {
-                return new Ciudades[0];
+                return new Equipos[0];
             }
 
             var content = await response.Content.ReadAsStringAsync();
 
-            var data = JsonConvert.DeserializeObject<Ciudades[]>(content);
+            var data = JsonConvert.DeserializeObject<Equipos[]>(content);
 
             Debug.WriteLine(
                 data
