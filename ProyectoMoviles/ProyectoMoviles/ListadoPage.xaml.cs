@@ -50,6 +50,7 @@ namespace ProyectoMoviles
             //Navigation.PushAsync(new PaginaTabs());
         }
 
+
         private async void Refrescar()
         {
             IsBusy = false;

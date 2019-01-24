@@ -2,12 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoMoviles.EquiposPage"
-              Title="Equipos">
+             Title="{Binding Nombre_Ligas, StringFormat='Equipos de la {0}'}">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Filtre los elementos" />
-
-            <ListView x:Name="ListViewDatos" 
+                <ListView x:Name="ListViewDatos" 
                       IsRefreshing="{Binding IsBusy}" 
                       IsPullToRefreshEnabled="true"
                       ItemsSource="{Binding Items}"
@@ -16,8 +14,9 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Escudo}" Margin="5" WidthRequest = "30" HeightRequest = "20" Aspect="Fill" />
                                 <Label Text="{Binding EquipoID}" HorizontalOptions="Start"
-                                       VerticalTextAlignment="Center" Margin="5" />
+                                       VerticalTextAlignment="Center" Margin="5" IsVisible="False" />
                                 <Label Text="{Binding Nombre}" Margin="5" HorizontalOptions="End"
                                     VerticalTextAlignment="Center" />
                                 <Label Text="{Binding Partidos}" IsVisible="False" />

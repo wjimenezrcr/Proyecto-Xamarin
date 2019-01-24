@@ -5,8 +5,7 @@
              Title="Listado de Países">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Filtre los elementos" />
-
+            <SearchBar x:Name="filterText" Placeholder="Filtre los elementos"  />
             <ListView x:Name="ListViewDatos" 
                       IsRefreshing="{Binding IsBusy}" 
                       IsPullToRefreshEnabled="true"

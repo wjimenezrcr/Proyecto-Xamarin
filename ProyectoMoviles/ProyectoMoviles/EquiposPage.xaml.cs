@@ -17,6 +17,7 @@ namespace ProyectoMoviles
         public ApiServiceEquipos DataService { get; } = new ApiServiceEquipos();
         public ObservableCollection<object> Items { get; set; } = new ObservableCollection<object>();
         public string Ligas { get; set; }
+        public string Nombre_Ligas { get; set; }
         public Command RefrescarCommand { get; set; }
 
         private string _data = @"[
@@ -43,6 +44,8 @@ namespace ProyectoMoviles
 
             Ligas = CodigoLiga.Codigo;
 
+            Nombre_Ligas = CodigoLiga.Nombre;
+
             IsBusy = true;
             RefrescarCommand = new Command(() => Refrescar(Ligas));
 
@@ -62,7 +65,7 @@ namespace ProyectoMoviles
                 );
         }
 
-
+     
         private async void Refrescar(String Codigo)
         {
             IsBusy = false;
@@ -75,6 +78,8 @@ namespace ProyectoMoviles
             }
             try
             {
+                Items.Clear();
+                
                 var data = await DataService.GetStringAsync();
 
                 foreach (var item in data)

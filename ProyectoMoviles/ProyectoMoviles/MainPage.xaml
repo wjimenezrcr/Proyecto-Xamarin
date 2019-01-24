@@ -9,7 +9,7 @@
         <StackLayout Orientation="Vertical"
                      Margin="5" BackgroundColor="White">
             <Image Source="logo.png" Aspect="AspectFit" Margin="5" HeightRequest="200" WidthRequest="200"  VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Button Margin="10" Text="Iniciar" BackgroundColor="#0072BD" TextColor="White" FontSize="14" Command="{Binding AbrirListado}"/>
+            <Button Margin="20 " Text="Iniciar" BackgroundColor="#0072BD" TextColor="White" FontSize="14" Command="{Binding AbrirListado}"/>
         
         </StackLayout>
     </ContentPage.Content>
